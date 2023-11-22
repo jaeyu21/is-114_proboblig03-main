@@ -1,0 +1,33 @@
+
+body {
+    font-family: monospace; 
+    display: flex; 
+    align-items: center;
+    background: linear-gradient(#e66465, #9198e5);
+  }
+  h1, h2, h3{
+      color: whitesmoke;
+  }
+  
+  .rect:hover { 
+      opacity: 0.6; 
+  }
+  
+   .energi {
+      text-align: left;
+      float: left;
+      align-items: center;
+      transform: rotate(-90deg);
+      white-space:s nowrap;
+  }
+  .tittel{
+      text-align: center;
+  }
+  #bar-chart{
+      border: 1px dashed black;
+      align-items: center;
+      color: white;
+  }
+  h3 #sum{
+      text-align: bottom;
+  }

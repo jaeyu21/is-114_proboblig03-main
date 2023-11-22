@@ -1,0 +1,274 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Times New Roman', Times, serif;
+    min-height: 100vh;
+    background-color: #475569;
+    background: linear-gradient(#ffafbd, #ffc3a0) ; 
+    display: flex;
+    flex-direction: column;
+}
+
+ul {
+    list-style-type: none;
+    list-style: none;
+}
+/* header */ 
+
+ul .home a {
+    float: left;
+    padding: 1rem;
+    color: #FFF;
+    text-decoration: none;
+    margin-top: 0.1vh;
+    border: 1px solid #572828;
+    border-radius: 1rem;
+    background-color: #de6262;
+}
+
+ul .home a:hover{
+    opacity: 0.7;
+    transition-duration: 1s;
+    transition-delay: 0.1s;
+}
+
+
+ul .menu a {
+    list-style: none;
+    float: right;
+    padding: 1rem;
+    color: #FFF;
+    text-decoration: none;
+    margin-top: 0.1vh;
+    border: 1px solid #572828;
+    border-radius: 1rem;
+    background-color: #de6262; 
+}
+
+ul .menu a:hover{
+    opacity: 0.7;
+    transition-duration: 1s;
+    transition-delay: 0.1s;
+}
+/* navigation */
+nav{
+    display:inline;
+}
+
+/* sirkelen i nav */ 
+
+.figure1 #myCanvas{
+    float: right;      
+    position: inherit;
+    border-radius: 50%;  
+    outline-offset: -8vh; 
+    outline:solid 1px lavender; 
+}
+
+/* kurv diamanten i nav */
+
+.figure2 #diamond{
+    float: left;
+    margin-top: 4em;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+
+/* main og header*/
+
+header 
+header, main{
+    display: grid;
+    place-content: center;
+}
+
+/* header og footer stil */
+
+header, footer{
+    background-color: #ffdde1;
+    color: whitesmoke;
+    border: 1px solid #ee9ca7;
+}
+header{
+    top: 0;
+    padding: 0.5rem;
+}
+main{
+    flex-grow: 1;
+}
+footer{
+    padding: 0.3rem;
+    text-align: right;
+    bottom: 0;
+}
+footer .social{
+    height: 48px;
+}
+
+
+/* medlemsiden
+*/
+.menu a:hover{
+    opacity: 0.8;
+    transition: 2s;
+}
+
+/* tekstanimasjon i hovedsiden */
+
+.homeText h1 {
+position: relative;
+font-size: 50px;
+letter-spacing: 7px;
+text-align: center;
+font-family: monospace;
+color: #fdd3da;
+margin-top: 1vh;
+-webkit-text-stroke: 1px #333;
+text-transform: uppercase;
+white-space: nowrap;
+overflow: hidden;
+animation: velkommen 6s steps(25) infinite ;
+}
+/*animasjon */
+@keyframes velkommen {
+from {
+    width: 0;
+}
+to {
+    width: 100%;
+    }
+}
+
+/* Medlem css*/
+
+/*header */
+.mainMenu{
+    list-style: none;
+}
+.mainMenu .home{
+    list-style: none;
+    float: left;
+    padding: 1rem;
+    color: #FFF;
+    text-decoration: none;
+    margin-top: 0.3vh;
+    border: 1px solid #572828;
+    border-radius: 1rem;
+    background-color: #de6262; 
+}
+
+.mainMenu{
+    list-style: none;
+}
+/* stil på knappen til hjemsiden */
+.mainMenu .home{
+    list-style: none;
+    float: left;
+    padding: 1rem;
+    color: #FFF;
+    text-decoration: none;
+    margin-top: 0.3vh;
+    border: 1px solid #572828;
+    border-radius: 1rem;
+    background-color: #de6262; 
+}
+
+/* den største div i medlemsiden */
+.picture-container {
+    display: flex;
+}
+
+/* plassering av bildet inne DIV'en og biografi*/
+.picture{
+    position: absolute;
+    margin: 2em 1.5em;
+    border: 2px solid red;
+    height: 600px;
+    width: 500px;
+    border-radius: 50px;
+    align-items: left;
+    background-color: whitesmoke;
+}
+
+.picture h3{
+    text-decoration: underline;
+}
+ .inner-picture {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 10.5px;
+    font-weight: lighter;
+    position: absolute;
+    margin: 0px 3em;
+    text-align: center;
+
+}
+/* navn på medlem */
+.picture2{
+    position: absolute;
+    margin: 7em 40rem;
+    border: 2px solid red;
+    height: 80px;
+    width: 250px;
+    border-radius: 150px;
+    align-items: left;
+    background-color: whitesmoke;
+}   
+
+.picture2 h1{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 35px;
+    margin: 10px;
+    color: #333 ;
+    text-align: center;
+}
+
+/* sitat */ 
+.quote{
+    position: relative;
+    font-size: 3.5rem;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-align: left;
+    margin-left: 40rem;
+    margin-top: 17rem;
+    animation: memberQuote 5s steps(54);
+}
+/* tekst og figuranimasjon */
+@keyframes memberQuote {
+from {
+    width: 0%;
+}
+to {
+    width: 80%;
+    }
+}
+
+/* skal velge ' ❝ ' , for å gjøre det større */ 
+.quote span{
+    font-size: 5rem;
+}
+
+/* tilsvarer for figuren som skal rotere rundt 
+fra 0 til 360 og ikke stopper så lenge man ikke trykker to ganger på den */
+svg {
+    cursor: pointer;
+  }
+  
+  .rotate {
+    animation: rotateAnimation 2s linear infinite;
+  }
+  
+  @keyframes rotateAnimation {
+    from {
+      transform-origin: center center;
+      transform: rotate(0deg);
+    }
+    to {
+      transform-origin: center center;
+      transform: rotate(360deg);
+    }
+  }
